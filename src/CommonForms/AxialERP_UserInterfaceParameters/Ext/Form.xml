@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="FormClose" id="65">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Close</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>es_CO</v8:lang>
+						<v8:content>Cerrar</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="FormCloseExtendedTooltip" id="66"/>
+			</Button>
+			<Button name="FormRevertAllChanges" id="51">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.RevertAllChangesForMe</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Restore default values for me</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>es_CO</v8:lang>
+						<v8:content>Restaurar valores predeterminados para mi</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="FormRevertAllChangesExtendedTooltip" id="52"/>
+			</Button>
+			<Button name="FormRevertAllChangesForAllUsers" id="67">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>false</xr:Common>
+					<xr:Value name="Role.AxialERP_DefaultRole">false</xr:Value>
+					<xr:Value name="Role.Administration">true</xr:Value>
+					<xr:Value name="Role.FullRights">true</xr:Value>
+				</UserVisible>
+				<CommandName>Form.Command.RevertAllChangesForAllUsers</CommandName>
+				<BackColor>web:LightYellow</BackColor>
+				<Title>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Restore default values for all users</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>es_CO</v8:lang>
+						<v8:content>Restaurar valores predeterminados para todos los usuarios</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="FormRevertAllChangesForAllUsersExtendedTooltip" id="68"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="MainPages" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Main pages</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_CO</v8:lang>
+					<v8:content>Páginas principales</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="MainPagesExtendedTooltip" id="46"/>
+			<ChildItems>
+				<Page name="GroupPageStyle" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Interface Color Palette</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_CO</v8:lang>
+							<v8:content>Paleta de colores de la interfaz</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Picture</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="GroupPageStyleExtendedTooltip" id="50"/>
+					<ChildItems>
+						<UsualGroup name="GroupStyleSelection" id="13">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupStyleSelectionExtendedTooltip" id="14"/>
+							<ChildItems>
+								<RadioButtonField name="AllStyles" id="5">
+									<DataPath>SelectedStyle</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Select predefined style</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_CO</v8:lang>
+											<v8:content>Seleccione un estilo predefinido</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>2</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>1</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>es_CO</v8:lang>
+														<v8:content>1</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>2</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>es_CO</v8:lang>
+														<v8:content>2</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">2</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="AllStylesContextMenu" id="6"/>
+									<ExtendedTooltip name="AllStylesExtendedTooltip" id="7"/>
+									<Events>
+										<Event name="OnChange">AllStylesOnChange</Event>
+									</Events>
+								</RadioButtonField>
+								<UsualGroup name="GroupStyleSetButtons" id="80">
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group style set buttons</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Group style set buttons</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupStyleSetButtonsExtendedTooltip" id="81"/>
+									<ChildItems>
+										<Button name="SetSelectedStyleForMe" id="55">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.SetSelectedStyleForMe</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Set selected style for me</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_CO</v8:lang>
+													<v8:content>Establecer estilo seleccionado para mi</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="SetSelectedStyleForMeExtendedTooltip" id="56"/>
+										</Button>
+										<Button name="SetSelectedStyleForAllUsers" id="53">
+											<Type>UsualButton</Type>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+												<xr:Value name="Role.AxialERP_DefaultRole">false</xr:Value>
+												<xr:Value name="Role.Administration">true</xr:Value>
+												<xr:Value name="Role.FullRights">true</xr:Value>
+											</UserVisible>
+											<CommandName>Form.Command.SetSelectedStyleForAllUsers</CommandName>
+											<BackColor>web:LightYellow</BackColor>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Set selected style for all users</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_CO</v8:lang>
+													<v8:content>Establecer estilo seleccionado para todos los usuarios</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="SetSelectedStyleForAllUsersExtendedTooltip" id="54"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="GroupPreview" id="78">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group preview</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group preview</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupPreviewExtendedTooltip" id="79"/>
+							<ChildItems>
+								<LabelDecoration name="DecorationStylePreviewDescription" id="75">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>By choosing a predefined style, you can easily distinguish between different environments (production/staging/quality assurance), differentiate among various companies and infobases, and select an interface that aligns with your personal preferences.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_CO</v8:lang>
+											<v8:content>Al elegir un estilo predefinido, puede distinguir fácilmente entre diferentes entornos (producción/prueba/calidad), diferenciar entre diferentes empresas e infobases, y seleccionar una interfaz que se ajuste a sus preferencias personales.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="DecorationStylePreviewDescriptionContextMenu" id="76"/>
+									<ExtendedTooltip name="DecorationStylePreviewDescriptionExtendedTooltip" id="77"/>
+								</LabelDecoration>
+								<PictureField name="StylePreview" id="29">
+									<DataPath>StylePreview</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="StylePreviewContextMenu" id="30"/>
+									<ExtendedTooltip name="StylePreviewExtendedTooltip" id="31"/>
+								</PictureField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="GroupPageScale" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Interface Scale</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_CO</v8:lang>
+							<v8:content>Escala de la interfaz</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Zoom</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="GroupPageScaleExtendedTooltip" id="48"/>
+					<ChildItems>
+						<UsualGroup name="GroupScaleModes" id="19">
+							<TitleFont ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupScaleModesExtendedTooltip" id="20"/>
+							<ChildItems>
+								<UsualGroup name="GroupCompactMode" id="32">
+									<Group>Vertical</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupCompactModeExtendedTooltip" id="33"/>
+									<ChildItems>
+										<LabelDecoration name="DecorationCompactModeExplanation" id="69">
+											<Width>40</Width>
+											<Height>5</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>The Compact Mode optimizes your interface for efficient space utilization, making it suitable for smaller screens and tasks requiring focused attention. However, users should be aware that this mode may sacrifice some visibility of finer details.</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_CO</v8:lang>
+													<v8:content>El Modo Compacto optimiza la interfaz para un uso eficiente del espacio, lo que lo hace adecuado para pantallas más pequeñas y tareas que requieren atención focalizada. Sin embargo, es importante tener en cuenta que este modo puede reducir la visibilidad de detalles más finos.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="DecorationCompactModeExplanationContextMenu" id="70"/>
+											<ExtendedTooltip name="DecorationCompactModeExplanationExtendedTooltip" id="71"/>
+										</LabelDecoration>
+										<PictureDecoration name="DecorationCompactModeExample" id="36">
+											<Width>50</Width>
+											<Height>12</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.AxialERP_CompactInterface</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Double</v8ui:style>
+											</Border>
+											<ContextMenu name="DecorationCompactModeExampleContextMenu" id="37"/>
+											<ExtendedTooltip name="DecorationCompactModeExampleExtendedTooltip" id="38"/>
+										</PictureDecoration>
+										<Button name="SetCompactModeForMe" id="59">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.SetCompactModeForMe</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Set compact mode for me</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_CO</v8:lang>
+													<v8:content>Establecer modo compacto para mi</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="SetCompactModeForMeExtendedTooltip" id="60"/>
+										</Button>
+										<Button name="SetCompactModeForAllUsers" id="57">
+											<Type>UsualButton</Type>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+												<xr:Value name="Role.AxialERP_DefaultRole">false</xr:Value>
+												<xr:Value name="Role.Administration">true</xr:Value>
+												<xr:Value name="Role.FullRights">true</xr:Value>
+											</UserVisible>
+											<CommandName>Form.Command.SetCompactModeForAllUsers</CommandName>
+											<BackColor>web:LightYellow</BackColor>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Set compact mode for all users</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_CO</v8:lang>
+													<v8:content>Establecer modo compacto para todos los usuarios</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="SetCompactModeForAllUsersExtendedTooltip" id="58"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="GroupFullScale" id="34">
+									<UserVisible>
+										<xr:Common>true</xr:Common>
+										<xr:Value name="Role.AxialERP_DefaultRole">true</xr:Value>
+										<xr:Value name="Role.Administration">true</xr:Value>
+									</UserVisible>
+									<Group>Vertical</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupFullScaleExtendedTooltip" id="35"/>
+									<ChildItems>
+										<LabelDecoration name="DecorationFullScaleExplanation" id="72">
+											<Width>40</Width>
+											<Height>5</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Full Scale Mode is the default mode in the application. It expands your interface, allowing for a comprehensive exploration of all the features and finer points, which is especially advantageous on larger screens. However, it should be noted that this mode may occupy a significant portion of the screen real estate</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_CO</v8:lang>
+													<v8:content>El Modo de Escala Completa es el modo por defecto en la aplicación. Amplía tu interfaz, permitiendo una exploración exhaustiva de todas las funciones y detalles más finos, lo cual es especialmente ventajoso en pantallas más grandes. Sin embargo, cabe destacar que este modo puede ocupar una porción significativa del espacio en la pantalla.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="DecorationFullScaleExplanationContextMenu" id="73"/>
+											<ExtendedTooltip name="DecorationFullScaleExplanationExtendedTooltip" id="74"/>
+										</LabelDecoration>
+										<PictureDecoration name="DecorationFullScaleExample" id="39">
+											<Width>50</Width>
+											<Height>12</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.AxialERP_RegularSizeInterface</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Double</v8ui:style>
+											</Border>
+											<ContextMenu name="DecorationFullScaleExampleContextMenu" id="40"/>
+											<ExtendedTooltip name="DecorationFullScaleExampleExtendedTooltip" id="41"/>
+										</PictureDecoration>
+										<Button name="SetFullScaleSizeForMe" id="63">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.SetFullScaleSizeForMe</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Set full scale size for me</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_CO</v8:lang>
+													<v8:content>Establecer modo de escala completa para mi</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="SetFullScaleSizeForMeExtendedTooltip" id="64"/>
+										</Button>
+										<Button name="SetFullScaleSizeForAllUsers" id="61">
+											<Type>UsualButton</Type>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+												<xr:Value name="Role.AxialERP_DefaultRole">false</xr:Value>
+												<xr:Value name="Role.Administration">true</xr:Value>
+												<xr:Value name="Role.FullRights">true</xr:Value>
+											</UserVisible>
+											<CommandName>Form.Command.SetFullScaleSizeForAllUsers</CommandName>
+											<BackColor>web:LightYellow</BackColor>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Set full scale size mode for all users</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_CO</v8:lang>
+													<v8:content>Establecer modo escala completa para todos los usuarios</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="SetFullScaleSizeForAllUsersExtendedTooltip" id="62"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="GroupFooter" id="27">
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupFooterExtendedTooltip" id="28"/>
+			<ChildItems>
+				<LabelDecoration name="DecorationAxialAdText" id="42">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>&lt;fontsize 12&gt;&lt;b&gt;Want to empower your business with innovative ideas? &lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;b&gt;Contact us to make it happen: &lt;/&gt;&lt;/&gt;&lt;link mailto:info@axial-erp.co&gt;&lt;fontsize 12&gt;&lt;b&gt;info@axial-erp.co&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_CO</v8:lang>
+							<v8:content>&lt;fontsize 12&gt;&lt;b&gt;Tienes ideas para impulsar tu negocio? &lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;b&gt;Contáctanos y hagámoslas realidad: &lt;/&gt;&lt;/&gt;&lt;link mailto:info@axial-erp.co&gt;&lt;fontsize 12&gt;&lt;b&gt;info@axial-erp.co&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<ContextMenu name="DecorationAxialAdTextContextMenu" id="43"/>
+					<ExtendedTooltip name="DecorationAxialAdTextExtendedTooltip" id="44"/>
+				</LabelDecoration>
+				<PictureDecoration name="DecorationAxialAdLogo" id="24">
+					<Width>15</Width>
+					<Height>2</Height>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Hyperlink>true</Hyperlink>
+					<PictureSize>AutoSize</PictureSize>
+					<Picture>
+						<xr:Ref>CommonPicture.AxialERP_CompanyLogo</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="DecorationAxialAdLogoContextMenu" id="25"/>
+					<ExtendedTooltip name="DecorationAxialAdLogoExtendedTooltip" id="26"/>
+					<Events>
+						<Event name="Click">DecorationAxialAdLogoClick</Event>
+					</Events>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="SelectedStyle" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select Predefined Style</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_CO</v8:lang>
+					<v8:content>Seleccionar estilo predefinido</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="StylePreview" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="SetCompactModeForMe" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set compact mode for me</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_CO</v8:lang>
+					<v8:content>Establecer modo compacto para mí</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CollaborationSystemUser</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SetCompactModeForMe</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="SetFullScaleSizeForMe" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set full scale size for me</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_CO</v8:lang>
+					<v8:content>Establecer tamaño a escala completa para mí</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CollaborationSystemUser</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SetFullScaleSizeForMe</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="SetSelectedStyleForMe" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set selected style for me</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_CO</v8:lang>
+					<v8:content>Establecer el estilo seleccionado para mí</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CollaborationSystemUser</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SetSelectedStyleForMe</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="RevertAllChangesForMe" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Restore Default Values for Me</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_CO</v8:lang>
+					<v8:content>Restaurar valores predeterminados para mí</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.RotateCounterclockwise</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>RevertAllChangesForMe</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="SetSelectedStyleForAllUsers" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set selected style for all users</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_CO</v8:lang>
+					<v8:content>Establecer el estilo seleccionado para todos los usuarios</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.GroupConversation</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SetSelectedStyleForAllUsers</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="SetCompactModeForAllUsers" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set compact mode for all users</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_CO</v8:lang>
+					<v8:content>Establecer modo compacto para todos los usuarios</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.GroupConversation</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SetCompactModeForAllUsers</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="SetFullScaleSizeForAllUsers" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set full scale size for all users</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_CO</v8:lang>
+					<v8:content>Establecer tamaño a escala completa para todos los usuarios</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.GroupConversation</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SetFullScaleSizeForAllUsers</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="RevertAllChangesForAllUsers" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Restore Default Values for All Users</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>es_CO</v8:lang>
+					<v8:content>Restaurar valores predeterminados para todos los usuarios</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.RotateCounterclockwise</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>RevertAllChangesForAllUsers</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>
