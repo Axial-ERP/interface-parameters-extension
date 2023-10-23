@@ -43,6 +43,10 @@
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Axial ERP | Estilos de interfaz adicionales</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Axial ERP | Дополнительные стили интерфейса</v8:content>
+				</v8:item>
 			</Synonym>
 			<Comment/>
 			<ConfigurationExtensionPurpose>Customization</ConfigurationExtensionPurpose>
@@ -59,18 +63,13 @@
 			</DefaultRoles>
 			<Vendor>Axial ERP</Vendor>
 			<Version>1.0</Version>
-			<DefaultStyle/>
-			<DefaultLanguage>Language.English</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
 			<Copyright/>
 			<VendorInformationAddress/>
 			<ConfigurationInformationAddress/>
-			<InterfaceCompatibilityMode>TaxiEnableVersion8_2</InterfaceCompatibilityMode>
 		</Properties>
 		<ChildObjects>
-			<Language>English</Language>
-			<Language>Colombian</Language>
 			<Style>AxialERP_Blue</Style>
 			<Style>AxialERP_BlueOrange</Style>
 			<Style>AxialERP_BlueYellow</Style>
@@ -112,8 +111,7 @@
 			<CommonPicture>AxialERP_StyleExample_Turquoise</CommonPicture>
 			<CommonPicture>AxialERP_StyleExample_Bone</CommonPicture>
 			<Role>AxialERP_DefaultRole</Role>
-			<Role>Administration</Role>
-			<Role>FullRights</Role>
+			<Role>AxialERP_ChangeUserInterfaceParameters</Role>
 			<CommonCommand>AxialERP_OpenUserInterfaceParameters</CommonCommand>
 			<CommonForm>AxialERP_UserInterfaceParameters</CommonForm>
 		</ChildObjects>

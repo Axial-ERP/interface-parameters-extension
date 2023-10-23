@@ -1,4 +1,4 @@
-﻿&After("SessionParametersSetting")
+﻿&After("УстановкаПараметровСеанса")
 Procedure AxialERP_SessionParametersSetting(RequiredParameters)
 
 	If RequiredParameters <> Undefined Then
@@ -24,10 +24,15 @@ Procedure AxialERP_SessionParametersSetting(RequiredParameters)
 			
 		Else        
 			
-			MainStyle = StyleLib.Default;     
+			Try
+				MainStyle = StyleLib.Default; //not found in ru-SSL
+			Except
+				MainStyle = new Style();
+			EndTry;
 			
 		EndIf;   
 		
 	EndIf;   
 
 EndProcedure
+
