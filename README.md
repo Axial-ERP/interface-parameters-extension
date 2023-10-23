@@ -63,3 +63,4 @@ Administrators have additional options to select a predefined scaling mode for a
 * This source code is shared under the MIT License. Please refer to the LICENSE file for detailed terms and conditions.
 * All software and artifacts contained in this repository are provided "as-is" without any warranty. Users are advised to exercise their discretion while using this software and to ensure that it meets their individual requirements. The authors/maintainers are not liable for any damages, data loss, or issues resulting from the use of this software.
 * The compiled version of the configuration extension can be found under the "Releases" section of this repository.
+* We warmly welcome community contributions! If you wish to enhance this repository, please fork it and submit your changes via a pull request. Ensure your code aligns with general standards and describe your changes in the pull request. Together, we can make this project even better.
