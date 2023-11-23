@@ -34,11 +34,21 @@ Var Message_RevertChangesForAllUsers;
 &AtClient
 Procedure OnOpen(Cancel)    
 	
-	Message_ThisActionAffectsAllUser 	= NStr("en = 'This action affects all users'; es_CO = 'Esta acción afecta a todos los usuarios'");
-	Message_SetCompactModeForAllUsers 	= NStr("en = 'Do you want to set the compact mode for all users?'; es_CO = '¿Desea establecer el modo compacto para todos los usuarios?'");
-	Message_SetFullScaleForAllUsers 	= NStr("en = 'Do you want to set the full scale intefrace mode for all users?'; es_CO = '¿Desea establecer el modo de interfaz a escala completa para todos los usuarios?'");
-	Message_SetStyleForAllUsers 		= NStr("en = 'Do you want to set this interface style for all users?'; es_CO = '¿Desea establecer este estilo de interfaz para todos los usuarios?'");
-	Message_RevertChangesForAllUsers 	= NStr("en = 'Do you want to revert changes for all users?'; es_CO = '¿Desea revertir los cambios para todos los usuarios?'");
+	Message_ThisActionAffectsAllUser 	= NStr("en = 'This action affects all users'; 
+												|es_CO = 'Esta acción afecta a todos los usuarios'; 
+												|ru = 'Это действие распространяется на всех пользователей'");
+	Message_SetCompactModeForAllUsers 	= NStr("en = 'Do you want to set the compact mode for all users?'; 
+												|es_CO = '¿Desea establecer el modo compacto para todos los usuarios?'; 
+												|ru = 'Установить компактный режим для всех пользователей?'");
+	Message_SetFullScaleForAllUsers 	= NStr("en = 'Do you want to set the full scale intefrace mode for all users?'; 
+												|es_CO = '¿Desea establecer el modo de interfaz a escala completa para todos los usuarios?'; 
+												|ru = 'Установить полноразмерный режим для всех пользователей?'");
+	Message_SetStyleForAllUsers 		= NStr("en = 'Do you want to set this interface style for all users?'; 
+												|es_CO = '¿Desea establecer este estilo de interfaz para todos los usuarios?'; 
+												|ru = 'Установить этот стиль интерфейса для всех пользователей?'");
+	Message_RevertChangesForAllUsers 	= NStr("en = 'Do you want to revert changes for all users?'; 
+												|es_CO = '¿Desea revertir los cambios para todos los usuarios?'; 
+												|ru = 'Отменить изменения для всех пользователей?'");
 
 EndProcedure
 
@@ -63,11 +73,12 @@ EndProcedure
 Async Procedure ShowRestartDialog()    
 	
 	Buttons = New ValueList;
-	Buttons.Add("Restart", 		NStr("en = 'Restart'; es_CO = 'Reiniciar';"));
-	Buttons.Add("DoNotRestart", NStr("en = 'Do not restart'; es_CO = 'No reiniciar';"));  
+	Buttons.Add("Restart", 		NStr("en = 'Restart'; es_CO = 'Reiniciar'; ru = 'Перезапустить'"));
+	Buttons.Add("DoNotRestart", NStr("en = 'Do not restart'; es_CO = 'No reiniciar'; ru = 'Не перезапускать'"));  
 	
-	QueryText = NStr("en = 'Changes have been applied! Please restart the app to see the updated interface.';
-					|es_CO = '¡Los cambios se han aplicado! Por favor, reinicia la aplicación para ver la interfaz actualizada.';");
+	QueryText = NStr("en = 'Changes have been applied! Please restart the app to see the updated interface.'; 
+					|es_CO = '¡Los cambios se han aplicado! Por favor, reinicia la aplicación para ver la interfaz actualizada.'; 
+					|ru = 'Изменения применены! Пожалуйста, перезапустите приложение, чтобы увидеть обновленный интерфейс.'");
 	
 	Result = Await DoQueryBoxAsync(QueryText, Buttons, 60, "Restart", "", "Restart");       
 	
@@ -84,7 +95,7 @@ EndProcedure
 Procedure OnCreateAtServer(Cancel, StandardProcessing)   
 	
 	Items.AllStyles.ChoiceList.Clear();  
-	Items.AllStyles.ChoiceList.Add("AxialERP_Default", NStr("en = 'Default Style'; es_CO = 'Estilo predeterminado';"));
+	Items.AllStyles.ChoiceList.Add("AxialERP_Default", NStr("en = 'Default Style'; es_CO = 'Estilo predeterminado'; ru = 'Стиль по умолчанию'"));
 	
 	For Each Style in Metadata.Styles Do   
 		

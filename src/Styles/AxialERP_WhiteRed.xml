@@ -12,6 +12,10 @@
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Blanco y Rojo</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Белый и Красный</v8:content>
+				</v8:item>
 			</Synonym>
 			<Comment/>
 		</Properties>

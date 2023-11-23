@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
 	<AutoCommandBar name="FormCommandBar" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
@@ -16,6 +16,10 @@
 						<v8:lang>es_CO</v8:lang>
 						<v8:content>Cerrar</v8:content>
 					</v8:item>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
 				</Title>
 				<ExtendedTooltip name="FormCloseExtendedTooltip" id="66"/>
 			</Button>
@@ -31,6 +35,10 @@
 						<v8:lang>es_CO</v8:lang>
 						<v8:content>Restaurar valores predeterminados para mi</v8:content>
 					</v8:item>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Восстановить значения по умолчанию для меня</v8:content>
+					</v8:item>
 				</Title>
 				<ExtendedTooltip name="FormRevertAllChangesExtendedTooltip" id="52"/>
 			</Button>
@@ -40,7 +48,7 @@
 					<xr:Common>false</xr:Common>
 					<xr:Value name="Role.AxialERP_DefaultRole">false</xr:Value>
 					<xr:Value name="Role.Administration">true</xr:Value>
-					<xr:Value name="Role.FullRights">true</xr:Value>
+					<xr:Value name="Role.FullAccess">true</xr:Value>
 				</UserVisible>
 				<CommandName>Form.Command.RevertAllChangesForAllUsers</CommandName>
 				<BackColor>web:LightYellow</BackColor>
@@ -52,6 +60,10 @@
 					<v8:item>
 						<v8:lang>es_CO</v8:lang>
 						<v8:content>Restaurar valores predeterminados para todos los usuarios</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Восстановить значения по умолчанию для всех пользователей</v8:content>
 					</v8:item>
 				</Title>
 				<ExtendedTooltip name="FormRevertAllChangesForAllUsersExtendedTooltip" id="68"/>
@@ -73,6 +85,10 @@
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Páginas principales</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основные страницы</v8:content>
+				</v8:item>
 			</Title>
 			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="MainPagesExtendedTooltip" id="46"/>
@@ -86,6 +102,10 @@
 						<v8:item>
 							<v8:lang>es_CO</v8:lang>
 							<v8:content>Paleta de colores de la interfaz</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цветовая палитра интерфейса</v8:content>
 						</v8:item>
 					</Title>
 					<Picture>
@@ -113,6 +133,10 @@
 											<v8:lang>es_CO</v8:lang>
 											<v8:content>Seleccione un estilo predefinido</v8:content>
 										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выбор предопределенного стиля</v8:content>
+										</v8:item>
 									</Title>
 									<TitleLocation>Top</TitleLocation>
 									<RadioButtonType>Auto</RadioButtonType>
@@ -129,6 +153,10 @@
 													</v8:item>
 													<v8:item>
 														<v8:lang>es_CO</v8:lang>
+														<v8:content>1</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
 														<v8:content>1</v8:content>
 													</v8:item>
 												</Presentation>
@@ -148,6 +176,10 @@
 														<v8:lang>es_CO</v8:lang>
 														<v8:content>2</v8:content>
 													</v8:item>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>2</v8:content>
+													</v8:item>
 												</Presentation>
 												<Value xsi:type="xs:string">2</Value>
 											</xr:Value>
@@ -165,11 +197,19 @@
 											<v8:lang>en</v8:lang>
 											<v8:content>Group style set buttons</v8:content>
 										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопок установки стиля</v8:content>
+										</v8:item>
 									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>en</v8:lang>
 											<v8:content>Group style set buttons</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопок установки стиля</v8:content>
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
@@ -190,6 +230,10 @@
 													<v8:lang>es_CO</v8:lang>
 													<v8:content>Establecer estilo seleccionado para mi</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Установить выбранный стиль для меня</v8:content>
+												</v8:item>
 											</Title>
 											<ExtendedTooltip name="SetSelectedStyleForMeExtendedTooltip" id="56"/>
 										</Button>
@@ -199,7 +243,7 @@
 												<xr:Common>false</xr:Common>
 												<xr:Value name="Role.AxialERP_DefaultRole">false</xr:Value>
 												<xr:Value name="Role.Administration">true</xr:Value>
-												<xr:Value name="Role.FullRights">true</xr:Value>
+												<xr:Value name="Role.FullAccess">true</xr:Value>
 											</UserVisible>
 											<CommandName>Form.Command.SetSelectedStyleForAllUsers</CommandName>
 											<BackColor>web:LightYellow</BackColor>
@@ -211,6 +255,10 @@
 												<v8:item>
 													<v8:lang>es_CO</v8:lang>
 													<v8:content>Establecer estilo seleccionado para todos los usuarios</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Установить выбранный стиль для всех пользователей</v8:content>
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="SetSelectedStyleForAllUsersExtendedTooltip" id="54"/>
@@ -248,6 +296,10 @@
 											<v8:lang>es_CO</v8:lang>
 											<v8:content>Al elegir un estilo predefinido, puede distinguir fácilmente entre diferentes entornos (producción/prueba/calidad), diferenciar entre diferentes empresas e infobases, y seleccionar una interfaz que se ajuste a sus preferencias personales.</v8:content>
 										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Устанавливая стили, вы сможете легко различать различные среды (продуктив/тестирование/контроль качества), дифференцировать различные компании и информационные базы, а также выбрать интерфейс, соответствующий вашим личным предпочтениям.</v8:content>
+										</v8:item>
 									</Title>
 									<ContextMenu name="DecorationStylePreviewDescriptionContextMenu" id="76"/>
 									<ExtendedTooltip name="DecorationStylePreviewDescriptionExtendedTooltip" id="77"/>
@@ -271,6 +323,10 @@
 						<v8:item>
 							<v8:lang>es_CO</v8:lang>
 							<v8:content>Escala de la interfaz</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Масштаб интерфейса</v8:content>
 						</v8:item>
 					</Title>
 					<Picture>
@@ -307,6 +363,10 @@
 													<v8:lang>es_CO</v8:lang>
 													<v8:content>El Modo Compacto optimiza la interfaz para un uso eficiente del espacio, lo que lo hace adecuado para pantallas más pequeñas y tareas que requieren atención focalizada. Sin embargo, es importante tener en cuenta que este modo puede reducir la visibilidad de detalles más finos.</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Компактный режим оптимизирует интерфейс для эффективного использования пространства, что делает его подходящим для небольших экранов и задач, требующих сосредоточенного внимания. Однако пользователи должны учитывать, что в этом режиме может ухудшиться видимость мелких деталей.</v8:content>
+												</v8:item>
 											</Title>
 											<ContextMenu name="DecorationCompactModeExplanationContextMenu" id="70"/>
 											<ExtendedTooltip name="DecorationCompactModeExplanationExtendedTooltip" id="71"/>
@@ -336,6 +396,10 @@
 													<v8:lang>es_CO</v8:lang>
 													<v8:content>Establecer modo compacto para mi</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Установить компактный режим для меня</v8:content>
+												</v8:item>
 											</Title>
 											<ExtendedTooltip name="SetCompactModeForMeExtendedTooltip" id="60"/>
 										</Button>
@@ -345,7 +409,7 @@
 												<xr:Common>false</xr:Common>
 												<xr:Value name="Role.AxialERP_DefaultRole">false</xr:Value>
 												<xr:Value name="Role.Administration">true</xr:Value>
-												<xr:Value name="Role.FullRights">true</xr:Value>
+												<xr:Value name="Role.FullAccess">true</xr:Value>
 											</UserVisible>
 											<CommandName>Form.Command.SetCompactModeForAllUsers</CommandName>
 											<BackColor>web:LightYellow</BackColor>
@@ -357,6 +421,10 @@
 												<v8:item>
 													<v8:lang>es_CO</v8:lang>
 													<v8:content>Establecer modo compacto para todos los usuarios</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Установить компактный режим для всех пользователей</v8:content>
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="SetCompactModeForAllUsersExtendedTooltip" id="58"/>
@@ -388,6 +456,10 @@
 													<v8:lang>es_CO</v8:lang>
 													<v8:content>El Modo de Escala Completa es el modo por defecto en la aplicación. Amplía tu interfaz, permitiendo una exploración exhaustiva de todas las funciones y detalles más finos, lo cual es especialmente ventajoso en pantallas más grandes. Sin embargo, cabe destacar que este modo puede ocupar una porción significativa del espacio en la pantalla.</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Полноразмерный режим - это режим, используемый в приложении по умолчанию. Он расширяет интерфейс, позволяя всесторонне изучить все функции и тонкости, что особенно удобно на больших экранах. Однако следует отметить, что этот режим может занимать значительную часть площади экрана</v8:content>
+												</v8:item>
 											</Title>
 											<ContextMenu name="DecorationFullScaleExplanationContextMenu" id="73"/>
 											<ExtendedTooltip name="DecorationFullScaleExplanationExtendedTooltip" id="74"/>
@@ -417,6 +489,10 @@
 													<v8:lang>es_CO</v8:lang>
 													<v8:content>Establecer modo de escala completa para mi</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Установить полноразмерный режим для меня</v8:content>
+												</v8:item>
 											</Title>
 											<ExtendedTooltip name="SetFullScaleSizeForMeExtendedTooltip" id="64"/>
 										</Button>
@@ -426,7 +502,7 @@
 												<xr:Common>false</xr:Common>
 												<xr:Value name="Role.AxialERP_DefaultRole">false</xr:Value>
 												<xr:Value name="Role.Administration">true</xr:Value>
-												<xr:Value name="Role.FullRights">true</xr:Value>
+												<xr:Value name="Role.FullAccess">true</xr:Value>
 											</UserVisible>
 											<CommandName>Form.Command.SetFullScaleSizeForAllUsers</CommandName>
 											<BackColor>web:LightYellow</BackColor>
@@ -438,6 +514,10 @@
 												<v8:item>
 													<v8:lang>es_CO</v8:lang>
 													<v8:content>Establecer modo escala completa para todos los usuarios</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Установить полноразмерный режим для всех пользователей</v8:content>
 												</v8:item>
 											</Title>
 											<ExtendedTooltip name="SetFullScaleSizeForAllUsersExtendedTooltip" id="62"/>
@@ -507,6 +587,10 @@
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Seleccionar estilo predefinido</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор предопределенного стиля</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -537,6 +621,10 @@
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Establecer modo compacto para mí</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить компактный режим для меня</v8:content>
+				</v8:item>
 			</Title>
 			<Picture>
 				<xr:Ref>StdPicture.CollaborationSystemUser</xr:Ref>
@@ -555,6 +643,10 @@
 				<v8:item>
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Establecer tamaño a escala completa para mí</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить полноразмерный режим для меня</v8:content>
 				</v8:item>
 			</Title>
 			<Picture>
@@ -575,6 +667,10 @@
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Establecer el estilo seleccionado para mí</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить выбранный стиль для меня</v8:content>
+				</v8:item>
 			</Title>
 			<Picture>
 				<xr:Ref>StdPicture.CollaborationSystemUser</xr:Ref>
@@ -593,6 +689,10 @@
 				<v8:item>
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Restaurar valores predeterminados para mí</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить значения по умолчанию для меня</v8:content>
 				</v8:item>
 			</Title>
 			<Picture>
@@ -613,6 +713,10 @@
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Establecer el estilo seleccionado para todos los usuarios</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить выбранный стиль для всех пользователей</v8:content>
+				</v8:item>
 			</Title>
 			<Picture>
 				<xr:Ref>StdPicture.GroupConversation</xr:Ref>
@@ -631,6 +735,10 @@
 				<v8:item>
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Establecer modo compacto para todos los usuarios</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить компактный режим для всех пользователей</v8:content>
 				</v8:item>
 			</Title>
 			<Picture>
@@ -651,6 +759,10 @@
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Establecer tamaño a escala completa para todos los usuarios</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить полноразмерный режим для всех пользователей</v8:content>
+				</v8:item>
 			</Title>
 			<Picture>
 				<xr:Ref>StdPicture.GroupConversation</xr:Ref>
@@ -669,6 +781,10 @@
 				<v8:item>
 					<v8:lang>es_CO</v8:lang>
 					<v8:content>Restaurar valores predeterminados para todos los usuarios</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить значения по умолчанию для всех пользователей</v8:content>
 				</v8:item>
 			</Title>
 			<Picture>
