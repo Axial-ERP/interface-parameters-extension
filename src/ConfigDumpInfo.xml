@@ -4,7 +4,7 @@
 		<Metadata name="CommonCommand.AxialERP_OpenUserInterfaceParameters" id="abcd9143-ec21-4efa-a5e1-dd687dc1b5e9" configVersion="20f96802eb3540d6ca7f564a1e598f57d4b7f520"/>
 		<Metadata name="CommonCommand.AxialERP_OpenUserInterfaceParameters.CommandModule" id="abcd9143-ec21-4efa-a5e1-dd687dc1b5e9.2" configVersion="a82209d39221daaebd6293d64aa7daea5157a9ac"/>
 		<Metadata name="CommonForm.AxialERP_UserInterfaceParameters" id="dd5da1a8-3982-46de-9b68-87024483d7d4" configVersion="5ee59d36d6b732cae0b649c0bdc8a8c1b9f6ab6e"/>
-		<Metadata name="CommonForm.AxialERP_UserInterfaceParameters.Form" id="dd5da1a8-3982-46de-9b68-87024483d7d4.0" configVersion="941264f76f26d3c7356b4a487f4cb62308d2de4f"/>
+		<Metadata name="CommonForm.AxialERP_UserInterfaceParameters.Form" id="dd5da1a8-3982-46de-9b68-87024483d7d4.0" configVersion="112b81dc8a0ea7a9ba663bbc46f08567d947df63"/>
 		<Metadata name="CommonPicture.AxialERP_CompactInterface" id="3029c512-173e-416c-aa26-0eb8c435ad7a" configVersion="22bf223945e4cb698cf18b4b1e706146a7294349"/>
 		<Metadata name="CommonPicture.AxialERP_CompactInterface.Picture" id="3029c512-173e-416c-aa26-0eb8c435ad7a.0" configVersion="84657a76fa6120fffcc225d9c753a0471ea35774"/>
 		<Metadata name="CommonPicture.AxialERP_CompanyLogo" id="2cb63e77-97ad-44e3-a4a2-fc1a6e66f9dc" configVersion="55711176fae22cb2dbceac6deec34413568ffb27"/>
