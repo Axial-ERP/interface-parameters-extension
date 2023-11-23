@@ -1,7 +1,7 @@
 # User Interface Parameters Extension for 1C:Drive
 
-The "User Interface Parameters" is an extension developed for 1C:Drive by Axial ERP. It extends the existing interface customization options, allowing individual users to fine-tune the UI according to specific requirements and preferences.
-Two languages are supported - English and Spanish.
+The "User Interface Parameters" is an extension developed for 1C:Drive 1.5+ by Axial ERP. It extends the existing interface customization options, allowing individual users to fine-tune the UI according to specific requirements and preferences.
+Three languages are supported - English, Spanish and Russian.
 
 ## Key Features
 
@@ -64,3 +64,6 @@ Administrators have additional options to select a predefined scaling mode for a
 * All software and artifacts contained in this repository are provided "as-is" without any warranty. Users are advised to exercise their discretion while using this software and to ensure that it meets their individual requirements. The authors/maintainers are not liable for any damages, data loss, or issues resulting from the use of this software.
 * The compiled version of the configuration extension can be found under the "Releases" section of this repository.
 * We warmly welcome community contributions! If you wish to enhance this repository, please fork it and submit your changes via a pull request. Ensure your code aligns with general standards and describe your changes in the pull request. Together, we can make this project even better.
+ 
+# Credits:
+* Thanks to [SeiOkami](https://github.com/SeiOkami/) for Russian translation
