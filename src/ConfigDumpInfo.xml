@@ -1,16 +1,32 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.16">
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.18">
 	<ConfigVersions>
 		<Metadata name="CommonCommand.AxialERP_OpenUserInterfaceParameters" id="abcd9143-ec21-4efa-a5e1-dd687dc1b5e9" configVersion="20f96802eb3540d6ca7f564a1e598f57d4b7f520"/>
 		<Metadata name="CommonCommand.AxialERP_OpenUserInterfaceParameters.CommandModule" id="abcd9143-ec21-4efa-a5e1-dd687dc1b5e9.2" configVersion="a82209d39221daaebd6293d64aa7daea5157a9ac"/>
 		<Metadata name="CommonForm.AxialERP_UserInterfaceParameters" id="dd5da1a8-3982-46de-9b68-87024483d7d4" configVersion="5ee59d36d6b732cae0b649c0bdc8a8c1b9f6ab6e"/>
-		<Metadata name="CommonForm.AxialERP_UserInterfaceParameters.Form" id="dd5da1a8-3982-46de-9b68-87024483d7d4.0" configVersion="112b81dc8a0ea7a9ba663bbc46f08567d947df63"/>
+		<Metadata name="CommonForm.AxialERP_UserInterfaceParameters.Form" id="dd5da1a8-3982-46de-9b68-87024483d7d4.0" configVersion="0549ed45b11a2c26e1383788492262db48d764ba"/>
 		<Metadata name="CommonPicture.AxialERP_CompactInterface" id="3029c512-173e-416c-aa26-0eb8c435ad7a" configVersion="22bf223945e4cb698cf18b4b1e706146a7294349"/>
 		<Metadata name="CommonPicture.AxialERP_CompactInterface.Picture" id="3029c512-173e-416c-aa26-0eb8c435ad7a.0" configVersion="84657a76fa6120fffcc225d9c753a0471ea35774"/>
 		<Metadata name="CommonPicture.AxialERP_CompanyLogo" id="2cb63e77-97ad-44e3-a4a2-fc1a6e66f9dc" configVersion="55711176fae22cb2dbceac6deec34413568ffb27"/>
 		<Metadata name="CommonPicture.AxialERP_CompanyLogo.Picture" id="2cb63e77-97ad-44e3-a4a2-fc1a6e66f9dc.0" configVersion="798f6601ce346324a465827c7c485250b57d1293"/>
+		<Metadata name="CommonPicture.AxialERP_OpenItemsPanel_BOTTOM" id="bec0cafe-fadb-4025-a274-5cc490907c08" configVersion="6360ac60c75045a179c4288b7d615924eaad35c2"/>
+		<Metadata name="CommonPicture.AxialERP_OpenItemsPanel_BOTTOM.Picture" id="bec0cafe-fadb-4025-a274-5cc490907c08.0" configVersion="ce9984e557ad4152e470315f26b6ae6e14cc8b9b"/>
+		<Metadata name="CommonPicture.AxialERP_OpenItemsPanel_LEFT" id="8ff7ad82-cc84-4c39-8822-57f9cabd0e6b" configVersion="2af55df776a115a4ece92413edc018c232579f19"/>
+		<Metadata name="CommonPicture.AxialERP_OpenItemsPanel_LEFT.Picture" id="8ff7ad82-cc84-4c39-8822-57f9cabd0e6b.0" configVersion="900b9112fee24acc184ac5307bb43ec4b7b7867a"/>
+		<Metadata name="CommonPicture.AxialERP_OpenItemsPanel_RIGHT" id="d8e66b6d-dd82-454d-b0ff-3d8d57f2d818" configVersion="3c56f051a4906fcdaceb7ba99da46f00092f967e"/>
+		<Metadata name="CommonPicture.AxialERP_OpenItemsPanel_RIGHT.Picture" id="d8e66b6d-dd82-454d-b0ff-3d8d57f2d818.0" configVersion="10c5490702f2307921aeaaf6e711fcd6f9f7d5b6"/>
+		<Metadata name="CommonPicture.AxialERP_OpenItemsPanel_TOP" id="702f50dc-f1c6-42c4-9007-f6dd2a063c3f" configVersion="b1d9a0dc97089eb92ec42c3f48cc81191518b813"/>
+		<Metadata name="CommonPicture.AxialERP_OpenItemsPanel_TOP.Picture" id="702f50dc-f1c6-42c4-9007-f6dd2a063c3f.0" configVersion="42e7f00121b00edbb0f75db8de26dfbd912fff73"/>
 		<Metadata name="CommonPicture.AxialERP_RegularSizeInterface" id="a5bbc83d-241a-4eb3-a4f8-68a45db18af2" configVersion="9e40e95440d56a46dbc743fecce93dcc5b2a4bcd"/>
 		<Metadata name="CommonPicture.AxialERP_RegularSizeInterface.Picture" id="a5bbc83d-241a-4eb3-a4f8-68a45db18af2.0" configVersion="fc5518bd98356fe6a668ef0c818ac4dbedced60b"/>
+		<Metadata name="CommonPicture.AxialERP_SectionPanel_LEFT_NoText" id="79db9aef-79c0-406c-af88-45789846ff89" configVersion="413296b14f52901ac66745ef3e197db07c7bd07c"/>
+		<Metadata name="CommonPicture.AxialERP_SectionPanel_LEFT_NoText.Picture" id="79db9aef-79c0-406c-af88-45789846ff89.0" configVersion="7b070f1e08466f5c0181a565d663957d9817a28f"/>
+		<Metadata name="CommonPicture.AxialERP_SectionPanel_LEFT_WithText" id="846c840b-bd62-4e2f-b150-56970454cf8a" configVersion="fcdce20d2ab8c159cdf1f3cabc4f44a308b28db2"/>
+		<Metadata name="CommonPicture.AxialERP_SectionPanel_LEFT_WithText.Picture" id="846c840b-bd62-4e2f-b150-56970454cf8a.0" configVersion="0ee3c4dc42bd0846be8d1322989fece12dd7d14d"/>
+		<Metadata name="CommonPicture.AxialERP_SectionPanel_TOP_NoText" id="86566018-b9f4-49ad-bbc4-87206aecb122" configVersion="57f2564a9d3dd51fe8bc30ab28a53aef394f38e3"/>
+		<Metadata name="CommonPicture.AxialERP_SectionPanel_TOP_NoText.Picture" id="86566018-b9f4-49ad-bbc4-87206aecb122.0" configVersion="f6f786e89ea9a9d0004b6ea2c6091cde62e55365"/>
+		<Metadata name="CommonPicture.AxialERP_SectionPanel_TOP_WithText" id="be9494d8-2aaa-4cc4-9781-7f3af56750ae" configVersion="1139358a77ea9520873d08c2bd03e4e4df06df3f"/>
+		<Metadata name="CommonPicture.AxialERP_SectionPanel_TOP_WithText.Picture" id="be9494d8-2aaa-4cc4-9781-7f3af56750ae.0" configVersion="176ceffc0757a0984ae03b14eb0ad4ebd131a896"/>
 		<Metadata name="CommonPicture.AxialERP_StyleExample_Blue" id="eb11f7b0-deca-47b0-92ab-96a86621bd30" configVersion="53df5df5ab0fba5bcb4688b8257c976e28b64a6d"/>
 		<Metadata name="CommonPicture.AxialERP_StyleExample_Blue.Picture" id="eb11f7b0-deca-47b0-92ab-96a86621bd30.0" configVersion="5bb5af5f21e756c602194636fe906e99cbb12f5e"/>
 		<Metadata name="CommonPicture.AxialERP_StyleExample_BlueOrange" id="64fd0492-b3c4-4b74-9cef-444f8ae1f3da" configVersion="cf6132df47ee15fc9d2ab8087a3c066708fb6424"/>
@@ -49,7 +65,7 @@
 		<Metadata name="CommonPicture.AxialERP_StyleExample_White.Picture" id="6398c310-e89e-425e-bc17-1b2164815a9a.0" configVersion="0fb17f16fece6b6fb0b8deb5d62d5c4a29188d7a"/>
 		<Metadata name="CommonPicture.AxialERP_StyleExample_WhiteRed" id="a67e9e8a-33f0-4863-b350-d3eef9e4f2f5" configVersion="5ea8211cff8f4ac9a37006c48792ed5acc956131"/>
 		<Metadata name="CommonPicture.AxialERP_StyleExample_WhiteRed.Picture" id="a67e9e8a-33f0-4863-b350-d3eef9e4f2f5.0" configVersion="bd9d15c7bbaa9ce1124918908cba2ded83d60d17"/>
-		<Metadata name="Configuration.AxialERP_AdditionalInterfaceStyles" id="237994fe-501e-4b27-b0ab-bd88f67440a3" configVersion="c140bf1ad610b1b936ee6407721fda9f38489a2d"/>
+		<Metadata name="Configuration.AxialERP_AdditionalInterfaceStyles" id="237994fe-501e-4b27-b0ab-bd88f67440a3" configVersion="32dc49c1d6c0d34d5dd194d3c40f6db0b83ef4b2"/>
 		<Metadata name="Configuration.AxialERP_AdditionalInterfaceStyles.SessionModule" id="6943f990-cdfc-4eec-ba95-ee53d72d2145.7" configVersion="34b2ca9b2ba871a26913703049fdc4d43bd06649"/>
 		<Metadata name="Language.Colombian" id="bfdb6274-499b-40c8-8c5e-7e7bdcc4040c" configVersion="1e790d2d801318f7319fbe96924b33aa78b7a6a6"/>
 		<Metadata name="Language.English" id="68a441f8-cd6a-4688-9286-8a0338502f07" configVersion="2652915ce9c6a8d2289f57d16e12320562d49c0e"/>

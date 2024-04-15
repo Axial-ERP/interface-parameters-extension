@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
 	<AutoCommandBar name="FormCommandBar" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
@@ -337,8 +337,8 @@
 					<ChildItems>
 						<UsualGroup name="GroupScaleModes" id="19">
 							<TitleFont ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<HorizontalStretch>true</HorizontalStretch>
 							<Group>AlwaysHorizontal</Group>
-							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="GroupScaleModesExtendedTooltip" id="20"/>
@@ -528,6 +528,388 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
+				<Page name="GroupPagePanels" id="82">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Panels Configuration</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>es_CO</v8:lang>
+							<v8:content>Configuración de Paneles</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конфигурация панелей</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.CustomizeForm</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="GroupPagePanelsExtendedTooltip" id="83"/>
+					<ChildItems>
+						<UsualGroup name="GroupPanelsDescription" id="138">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group panels description</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupPanelsDescriptionExtendedTooltip" id="139"/>
+							<ChildItems>
+								<LabelDecoration name="DecorationPanelsBufferLeft" id="143">
+									<Width>10</Width>
+									<ContextMenu name="DecorationPanelsBufferLeftContextMenu" id="144"/>
+									<ExtendedTooltip name="DecorationPanelsBufferLeftExtendedTooltip" id="145"/>
+								</LabelDecoration>
+								<LabelDecoration name="DecorationPanelPreviewDescription1" id="122">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Customize the location and settings of panels according to your preferences, enabling you to optimize the arrangement of elements in the user interface for a more efficient and comfortable browsing experience.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_CO</v8:lang>
+											<v8:content>Personaliza la ubicación y configuración de los paneles según tus preferencias, permitiéndote optimizar la disposición de los elementos en la interfaz de usuario para una experiencia de navegación más eficiente y cómoda.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройте расположение и настройки панелей в соответствии со своими предпочтениями, что позволит вам оптимизировать расположение элементов пользовательского интерфейса для более эффективного и удобного просмотра.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="DecorationPanelPreviewDescription1ContextMenu" id="123"/>
+									<ExtendedTooltip name="DecorationPanelPreviewDescription1ExtendedTooltip" id="124"/>
+								</LabelDecoration>
+								<LabelDecoration name="DecorationPanelsBufferRight" id="140">
+									<Width>10</Width>
+									<ContextMenu name="DecorationPanelsBufferRightContextMenu" id="141"/>
+									<ExtendedTooltip name="DecorationPanelsBufferRightExtendedTooltip" id="142"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="GroupPanelsSettings" id="134">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group panels settings</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group panels settings</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupPanelsSettingsExtendedTooltip" id="135"/>
+							<ChildItems>
+								<UsualGroup name="GroupSectionPanelLocation" id="84">
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupSectionPanelLocationExtendedTooltip" id="85"/>
+									<ChildItems>
+										<UsualGroup name="GroupSectionParams" id="146">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Group section params</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="GroupSectionParamsExtendedTooltip" id="147"/>
+											<ChildItems>
+												<RadioButtonField name="SectionPanelLocation" id="86">
+													<DataPath>SectionPanelLocation</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Section panel location</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_CO</v8:lang>
+															<v8:content>Ubicación del panel de secciones</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Расположение панели разделов</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Top</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>es_CO</v8:lang>
+																		<v8:content>Arriba</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Сверху</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">TOP</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Left</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>es_CO</v8:lang>
+																		<v8:content>Izquierda</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Слева</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">LEFT</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="SectionPanelLocationContextMenu" id="87"/>
+													<ExtendedTooltip name="SectionPanelLocationExtendedTooltip" id="88"/>
+													<Events>
+														<Event name="OnChange">SectionPanelLocationOnChange</Event>
+													</Events>
+												</RadioButtonField>
+												<CheckBoxField name="DisplaySectionPanelText" id="148">
+													<DataPath>DisplaySectionTitle</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Display section title</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es_CO</v8:lang>
+															<v8:content>Mostrar títulos de las secciones</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отображать заголовок раздела</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="DisplaySectionPanelTextContextMenu" id="149"/>
+													<ExtendedTooltip name="DisplaySectionPanelTextExtendedTooltip" id="150"/>
+													<Events>
+														<Event name="OnChange">DisplaySectionPanelTextOnChange</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<PictureField name="SectionPanelPreview" id="106">
+											<DataPath>SectionPanelPreview</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="SectionPanelPreviewContextMenu" id="107"/>
+											<ExtendedTooltip name="SectionPanelPreviewExtendedTooltip" id="108"/>
+										</PictureField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="GroupOpenItemsPanelLocation" id="109">
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupOpenItemsPanelLocationExtendedTooltip" id="110"/>
+									<ChildItems>
+										<RadioButtonField name="OpenItemsPanelLocation" id="89">
+											<DataPath>OpenItemsPanelLocation</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Open items panel location</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>es_CO</v8:lang>
+													<v8:content>Ubicación del panel de elementos abiertos</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Расположение панели открытых элементов</v8:content>
+												</v8:item>
+											</Title>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Top</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es_CO</v8:lang>
+																<v8:content>Arriba</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Сверху</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">TOP</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Bottom</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es_CO</v8:lang>
+																<v8:content>Abajo</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Снизу</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">BOTTOM</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Left</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es_CO</v8:lang>
+																<v8:content>Izquierda</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Слева</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">LEFT</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Right</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es_CO</v8:lang>
+																<v8:content>Derecha</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Справа</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">RIGHT</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="OpenItemsPanelLocationContextMenu" id="90"/>
+											<ExtendedTooltip name="OpenItemsPanelLocationExtendedTooltip" id="91"/>
+											<Events>
+												<Event name="OnChange">OpenItemsPanelLocationOnChange</Event>
+											</Events>
+										</RadioButtonField>
+										<PictureField name="OpenItemsPanelPreview" id="125">
+											<DataPath>OpenItemsPanelPreview</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="OpenItemsPanelPreviewContextMenu" id="126"/>
+											<ExtendedTooltip name="OpenItemsPanelPreviewExtendedTooltip" id="127"/>
+										</PictureField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="GroupPanelsSaveSettings" id="136">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group panels save settings</v8:content>
+								</v8:item>
+							</ToolTip>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupPanelsSaveSettingsExtendedTooltip" id="137"/>
+							<ChildItems>
+								<Button name="SetPanelSettingsForMe" id="130">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.SetPanelSettingsForMe</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Set panel settings for me</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_CO</v8:lang>
+											<v8:content>Establecer configuración de los paneles para mi</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Установить настройки панели для меня</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="SetPanelSettingsForMeExtendedTooltip" id="131"/>
+								</Button>
+								<Button name="SetPanelSettingsForAllUsers" id="132">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.SetPanelSettingsForAllUsers</CommandName>
+									<BackColor>web:LightYellow</BackColor>
+									<Title>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Set panel settings for all users</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>es_CO</v8:lang>
+											<v8:content>Establecer configuración de los paneles para todos los usuarios</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Установить настройки панели для всех пользователей</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="SetPanelSettingsForAllUsersExtendedTooltip" id="133"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 		<UsualGroup name="GroupFooter" id="27">
@@ -553,8 +935,8 @@
 						</v8:item>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;Хотите расширить возможности своего бизнеса инновационными идеями? &lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;fontsize 12&gt;&lt;b&gt;Свяжитесь с нами: &lt;/&gt;&lt;/&gt;&lt;link mailto:info@axial-erp.co&gt;&lt;fontsize 12&gt;&lt;b&gt;info@axial-erp.co&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+							<v8:content>&lt;font @Dotum&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;Хотите расширить возможности своего бизнеса инновационными идеями?&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font @Dotum&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;Свяжитесь с нами&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font @Dotum&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 12&gt;&lt;b&gt; &lt;/&gt;&lt;/&gt;&lt;link mailto:info@axial-erp.co&gt;&lt;fontsize 12&gt;&lt;b&gt;info@axial-erp.co&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 						</v8:item>
 					</Title>
 					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
@@ -606,6 +988,65 @@
 			</Type>
 		</Attribute>
 		<Attribute name="StylePreview" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="SectionPanelLocation" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Section panel location</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="OpenItemsPanelLocation" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open items panel location</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="DisplaySectionTitle" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Display section title</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SectionPanelPreview" id="6">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="OpenItemsPanelPreview" id="7">
 			<Type>
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
@@ -798,6 +1239,46 @@
 			</Picture>
 			<Action>RevertAllChangesForAllUsers</Action>
 			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="SetPanelSettingsForMe" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set panel settings for me</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set panel settings for me</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CollaborationSystemUser</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SetPanelSettingsForMe</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="SetPanelSettingsForAllUsers" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set panel settings for all users</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set panel settings for all users</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GroupConversation</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SetPanelSettingsForAllUsers</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 	</Commands>

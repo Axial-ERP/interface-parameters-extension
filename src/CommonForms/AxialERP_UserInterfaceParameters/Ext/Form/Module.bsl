@@ -1,6 +1,6 @@
 ﻿//MIT License
 
-//Copyright (c) [2023] Axial Solutions LLC
+//Copyright (c) [2023-2024] Axial Solutions LLC
 
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -29,26 +29,36 @@ Var Message_SetFullScaleForAllUsers;
 &AtClient
 Var Message_SetStyleForAllUsers;   
 &AtClient
+Var Message_SetPanelsSettingsForAllUsers;   
+&AtClient
 Var Message_RevertChangesForAllUsers;    
 
 &AtClient
 Procedure OnOpen(Cancel)    
 	
-	Message_ThisActionAffectsAllUser 	= NStr("en = 'This action affects all users'; 
-												|es_CO = 'Esta acción afecta a todos los usuarios'; 
-												|ru = 'Это действие распространяется на всех пользователей'");
-	Message_SetCompactModeForAllUsers 	= NStr("en = 'Do you want to set the compact mode for all users?'; 
-												|es_CO = '¿Desea establecer el modo compacto para todos los usuarios?'; 
-												|ru = 'Установить компактный режим для всех пользователей?'");
-	Message_SetFullScaleForAllUsers 	= NStr("en = 'Do you want to set the full scale intefrace mode for all users?'; 
-												|es_CO = '¿Desea establecer el modo de interfaz a escala completa para todos los usuarios?'; 
-												|ru = 'Установить полноразмерный режим для всех пользователей?'");
-	Message_SetStyleForAllUsers 		= NStr("en = 'Do you want to set this interface style for all users?'; 
-												|es_CO = '¿Desea establecer este estilo de interfaz para todos los usuarios?'; 
-												|ru = 'Установить этот стиль интерфейса для всех пользователей?'");
-	Message_RevertChangesForAllUsers 	= NStr("en = 'Do you want to revert changes for all users?'; 
-												|es_CO = '¿Desea revertir los cambios para todos los usuarios?'; 
-												|ru = 'Отменить изменения для всех пользователей?'");
+	Message_ThisActionAffectsAllUser 		= NStr("en = 'This action affects all users'; 
+													|es_CO = 'Esta acción afecta a todos los usuarios'; 
+													|ru = 'Это действие распространяется на всех пользователей'");  
+	
+	Message_SetCompactModeForAllUsers 		= NStr("en = 'Do you want to set the compact mode for all users?'; 
+													|es_CO = '¿Desea establecer el modo compacto para todos los usuarios?'; 
+													|ru = 'Установить компактный режим для всех пользователей?'");       
+	
+	Message_SetFullScaleForAllUsers 		= NStr("en = 'Do you want to set the full scale intefrace mode for all users?'; 
+													|es_CO = '¿Desea establecer el modo de interfaz a escala completa para todos los usuarios?'; 
+													|ru = 'Установить полноразмерный режим для всех пользователей?'");    
+	
+	Message_SetStyleForAllUsers 			= NStr("en = 'Do you want to set this interface style for all users?'; 
+													|es_CO = '¿Desea establecer este estilo de interfaz para todos los usuarios?'; 
+													|ru = 'Установить этот стиль интерфейса для всех пользователей?'");  
+	
+	Message_SetPanelsSettingsForAllUsers	= NStr("en = 'Do you want to set these panel settings for all users?'; 
+													|es_CO = '¿Desea establecer estas configuraciones de panel para todos los usuarios?'; 
+													|ru = 'Установить эту конфигурацию панелей для всех пользователей?'");  
+	
+	Message_RevertChangesForAllUsers 		= NStr("en = 'Do you want to revert changes for all users?'; 
+													|es_CO = '¿Desea revertir los cambios para todos los usuarios?'; 
+													|ru = 'Отменить изменения для всех пользователей?'");
 
 EndProcedure
 
@@ -90,7 +100,6 @@ Async Procedure ShowRestartDialog()
 		
 EndProcedure     
 
-
 &AtServer
 Procedure OnCreateAtServer(Cancel, StandardProcessing)   
 	
@@ -119,10 +128,116 @@ Procedure OnCreateAtServer(Cancel, StandardProcessing)
 		
 		SelectedStyle = "AxialERP_Default";
 		
-	EndIf;         
+	EndIf;  
 	
-	DisplayStylePreview();
+	DisplayStylePreview();   
 	
+	// load currently used panel settings     
+	UserSelectedSectionPanelSettings = SystemSettingsStorage.Load("Common/SectionsPanel/CommandInterfaceSettings", "",, InfoBaseUsers.CurrentUser().Name);
+	
+	If TypeOf(UserSelectedSectionPanelSettings) = Type("CommandInterfaceSettings") Then   
+		
+		DisplaySectionTitle = Not (UserSelectedSectionPanelSettings.SectionsPanelRepresentation = SectionsPanelRepresentation.Picture); 
+		
+	Else        
+		
+		DisplaySectionTitle = True;
+		
+	EndIf;  
+	
+	UserSelectedOpenItemsPanelSettings = SystemSettingsStorage.Load("Common/ClientApplicationInterfaceSettings", "",, InfoBaseUsers.CurrentUser().Name);
+	
+	If TypeOf(UserSelectedOpenItemsPanelSettings) = Type("ClientApplicationInterfaceSettings") Then	        
+		
+		SettingsContent = UserSelectedOpenItemsPanelSettings.GetContent();   
+		
+		Location = CheckPanelLocation("LEFT", SettingsContent.Left, "OpenItemsPanel");   
+		If ValueIsFilled(Location) Then OpenItemsPanelLocation = "LEFT" EndIf;  
+		
+		Location = CheckPanelLocation("RIGHT", SettingsContent.Right, "OpenItemsPanel");   
+		If ValueIsFilled(Location) Then OpenItemsPanelLocation = "RIGHT" EndIf;    
+		
+		Location = CheckPanelLocation("TOP", SettingsContent.Top, "OpenItemsPanel");   
+		If ValueIsFilled(Location) Then OpenItemsPanelLocation = "TOP" EndIf;    
+		
+		Location = CheckPanelLocation("BOTTOM", SettingsContent.Bottom, "OpenItemsPanel");   
+		If ValueIsFilled(Location) Then OpenItemsPanelLocation = "BOTTOM" EndIf;   
+		
+		Location = CheckPanelLocation("LEFT", SettingsContent.Left, "SectionsPanel");   
+		If ValueIsFilled(Location) Then SectionPanelLocation = "LEFT" EndIf;     
+		
+		Location = CheckPanelLocation("TOP", SettingsContent.Top, "SectionsPanel");   
+		If ValueIsFilled(Location) Then SectionPanelLocation = "TOP" EndIf;      	
+		
+	Else       
+		
+		OpenItemsPanelLocation = "BOTTOM";          
+		SectionPanelLocation = "TOP";
+		
+	EndIf;  
+	
+	DisplaySectionPanelPreview();
+	
+	DisplayOpenItemsPanelPreview();
+	
+EndProcedure    
+
+&AtServer
+Function CheckPanelLocation(TargetLocation, PanelGroup, PanelName)    
+	
+	For Each Panel in PanelGroup Do   
+		
+		If TypeOf(Panel) = Type("ClientApplicationInterfaceContentSettingsGroup") Then      
+			
+			Return CheckPanelLocation(TargetLocation, Panel, PanelName);
+			
+		ElsIf TypeOf(Panel) = Type("ClientApplicationInterfaceContentSettingsItem") Then
+			
+			If Panel.Name = PanelName Then
+				Return TargetLocation;
+			EndIf;    
+			
+		EndIf;
+							
+	EndDo;     
+	
+	Return Undefined;
+	
+EndFunction
+
+&AtServer
+Procedure DisplaySectionPanelPreview()        
+	
+	PictureName = "AxialERP_SectionPanel_" + SectionPanelLocation; 
+	
+	If DisplaySectionTitle Then       
+		PictureName = PictureName + "_WithText";		
+	Else                       
+		PictureName = PictureName + "_NoText";		
+	EndIf;
+	
+	SectionPanelPicPreview = Metadata.CommonPictures.Find(PictureName);       
+	
+	If SectionPanelPicPreview <> Undefined Then       
+		SectionPanelPreview = PutToTempStorage(PictureLib[SectionPanelPicPreview.Name].GetBinaryData());   
+	Else   
+		SectionPanelPreview = PutToTempStorage(PictureLib.AxialERP_SectionPanel_TOP_WithText.GetBinaryData());   
+	EndIf;  
+	
+EndProcedure    
+
+&AtServer
+Procedure DisplayOpenItemsPanelPreview()        
+	
+	PictureName = "AxialERP_OpenItemsPanel_" + OpenItemsPanelLocation; 
+	
+	OpenItemsPanelPicPreview = Metadata.CommonPictures.Find(PictureName);       
+	
+	If OpenItemsPanelPicPreview <> Undefined Then       
+		OpenItemsPanelPreview = PutToTempStorage(PictureLib[OpenItemsPanelPicPreview.Name].GetBinaryData());   
+	Else   
+		OpenItemsPanelPreview = PutToTempStorage(PictureLib.AxialERP_OpenItemsPanel_BOTTOM.GetBinaryData());   
+	EndIf;  
 	
 EndProcedure
 
@@ -170,7 +285,45 @@ Procedure DecorationAxialAdLogoClick(Item)
 	
 EndProcedure
 
+&AtServer
+Function CreateSectionsPanelSettings(SectionsPanelSettings, Default)       
+	
+	If Default Or TypeOf(SectionsPanelSettings) <> Type("CommandInterfaceSettings") Then    
+		SectionsPanelSettings = New CommandInterfaceSettings;    
+	EndIf;   
 
+	If Default Or DisplaySectionTitle Then     
+		SectionsPanelSettings.SectionsPanelRepresentation = SectionsPanelRepresentation.PictureAndText;   
+	Else
+		SectionsPanelSettings.SectionsPanelRepresentation = SectionsPanelRepresentation.Picture;   
+	EndIf;   
+	
+	Return SectionsPanelSettings;
+	
+EndFunction
+
+&AtServer
+Function CreatePanelsLocationSettings(PanelsLocationSettings, Default)       
+	
+	If Default Or TypeOf(PanelsLocationSettings) <> Type("ClientApplicationInterfaceSettings") Then   
+		PanelsLocationSettings = New ClientApplicationInterfaceSettings;	    
+	EndIf;
+	
+	ClientSettings = New ClientApplicationInterfaceContentSettings;   
+	
+	PopulateGroup(ClientSettings.Top, 		"TOP");
+	PopulateGroup(ClientSettings.Bottom, 	"BOTTOM");
+	PopulateGroup(ClientSettings.Left, 		"LEFT");
+	PopulateGroup(ClientSettings.Right, 	"RIGHT");
+	
+	PanelsLocationSettings.SetContent(ClientSettings);
+	
+	Return PanelsLocationSettings;
+	
+EndFunction
+
+	
+	
 #Region FormCommands
 
 &AtClient
@@ -307,7 +460,14 @@ Procedure RevertAllChangesForMeAtServer()
 	
 		SystemSettingsStorage.Save("Common/ClientSettings",, Settings);          
 			
-	EndIf;
+	EndIf;     
+	
+	//restore panels settings 
+	SectionPanelLocation 	= "LEFT";
+	OpenItemsPanelLocation 	= "BOTTOM";
+	DisplaySectionTitle 	= True;
+	
+	SetPanelSettingsForMeAtServer(True);
 
 EndProcedure
 
@@ -352,7 +512,14 @@ Procedure RevertAllChangesForAllUsersAtServer()
 		
 		CommonSettingsStorage.Delete("AxialERP", "SelectedStyleName", SettingsSelection.User);          
 		
-	EndDo;          
+	EndDo;     
+	
+	//restore panels settings 
+	SectionPanelLocation 	= "LEFT";
+	OpenItemsPanelLocation 	= "BOTTOM";
+	DisplaySectionTitle 	= True;
+	
+	SetPanelSettingsForAllUsersAtServer(True);
 	
 EndProcedure  
 
@@ -403,6 +570,130 @@ Async Procedure SetSelectedStyleForAllUsers(Command)
 	EndIf;
 
 EndProcedure  
+
+&AtServer
+Procedure SetPanelSettingsForMeAtServer(Default = False)   
+	
+	UserSettings = SystemSettingsStorage.Load("Common/SectionsPanel/CommandInterfaceSettings"); 
+	
+	SystemSettingsStorage.Save("Common/SectionsPanel/CommandInterfaceSettings",, CreateSectionsPanelSettings(UserSettings, Default));       
+	
+	//----------------------------------------------------
+	
+	UserSettings = SystemSettingsStorage.Load("Common/ClientApplicationInterfaceSettings");         
+	
+	SystemSettingsStorage.Save("Common/ClientApplicationInterfaceSettings",, CreatePanelsLocationSettings(UserSettings, Default));       
+
+EndProcedure 
+
+&AtServer
+Procedure PopulateGroup(PanelGroups, Position)     
+	
+	//make it on top of each other in both cases
+	If Position = "LEFT" Or Position = "RIGHT" Then   
+		
+		PanelGroup = New ClientApplicationInterfaceContentSettingsGroup;
+	
+		If SectionPanelLocation = Position Then     
+			PanelGroup.Add(New ClientApplicationInterfaceContentSettingsItem("SectionsPanel"));	
+		EndIf;
+		If OpenItemsPanelLocation = Position Then     
+			PanelGroup.Add(New ClientApplicationInterfaceContentSettingsItem("OpenItemsPanel"));	
+		EndIf;
+		
+		If PanelGroup.Count() > 0 Then  
+			PanelGroups.Add(PanelGroup);
+		EndIf;
+		
+	Else  
+		If SectionPanelLocation = Position Then     
+			PanelGroups.Add(New ClientApplicationInterfaceContentSettingsItem("SectionsPanel"));	
+		EndIf;
+		If OpenItemsPanelLocation = Position Then     
+			PanelGroups.Add(New ClientApplicationInterfaceContentSettingsItem("OpenItemsPanel"));	
+		EndIf;
+	EndIf;
+	
+EndProcedure
+	
+&AtClient
+Procedure SetPanelSettingsForMe(Command)  
+	
+	SetPanelSettingsForMeAtServer();  
+	
+	ShowRestartDialog();    
+	
+EndProcedure
+
+&AtServer
+Procedure SetPanelSettingsForAllUsersAtServer(Default = False)
+	
+	SettingsSelection = SystemSettingsStorage.Select(New Structure("ObjectKey", "Common/SectionsPanel/CommandInterfaceSettings"));
+	
+	While SettingsSelection.Next() Do    
+		
+		UserSettings = SettingsSelection.Settings;     
+		
+		SystemSettingsStorage.Save("Common/SectionsPanel/CommandInterfaceSettings",, 
+								CreateSectionsPanelSettings(UserSettings, Default),, SettingsSelection.User);          
+		
+	EndDo;       
+	
+	//----------------------------------------------------
+	
+	SettingsSelection = SystemSettingsStorage.Select(New Structure("ObjectKey", "Common/ClientApplicationInterfaceSettings"));
+	
+	While SettingsSelection.Next() Do    
+		
+		UserSettings = SettingsSelection.Settings;     
+		
+		SystemSettingsStorage.Save("Common/ClientApplicationInterfaceSettings",, 
+								CreatePanelsLocationSettings(UserSettings, Default),, SettingsSelection.User);          
+		
+	EndDo;    
+
+EndProcedure
+
+&AtClient
+Async Procedure SetPanelSettingsForAllUsers(Command)    
+	
+	Result = Await DoQueryBoxAsync(Message_SetPanelsSettingsForAllUsers, 
+		QuestionDialogMode.YesNo, 
+		60, 
+		DialogReturnCode.No, 
+		Message_ThisActionAffectsAllUser, 
+		DialogReturnCode.No);
+		
+	If Result = DialogReturnCode.Yes Then
+			
+		SetPanelSettingsForAllUsersAtServer();  
+		
+		ShowRestartDialog();
+		
+	EndIf;
+
+EndProcedure
+
+&AtClient
+Procedure SectionPanelLocationOnChange(Item) 
+	
+	DisplaySectionPanelPreview();    
+	
+EndProcedure
+
+&AtClient
+Procedure DisplaySectionPanelTextOnChange(Item)
+
+	DisplaySectionPanelPreview();  
+	
+EndProcedure
+
+&AtClient
+Procedure OpenItemsPanelLocationOnChange(Item)
+	
+	DisplayOpenItemsPanelPreview();
+	
+EndProcedure
 
 #EndRegion
 
