@@ -22,9 +22,9 @@ Upon entering the configuration window, you'll encounter two sections: one focus
 *   Restore Default Values for Me: Use this button to revert your interface settings to the default values.
 *   Restore Default Values for All Users: Exclusive to users with administrative roles, this button assigns default interface values to all users.
 
-![](images/image7.png)
+![](images/image7-1.png)
 
-## Style selection page
+## Style Selection Page
 
 By choosing a predefined style, you can easily distinguish between different environments (production/staging/quality assurance), differentiate among various companies and infobases, and select an interface that aligns with your personal preferences.
 
@@ -40,7 +40,7 @@ Administrators have access to an additional button allowing them to select a pre
 
 ![](images/image5.png)
 
-## Interface scale page
+## Interface Scale Page
 
 Within our interface customization options, you have the flexibility to choose between two distinct scales: Compact Mode and Full Scale Mode.
 
@@ -57,6 +57,16 @@ Select your preferred option by clicking the corresponding button. Upon selectio
 Administrators have additional options to select a predefined scaling mode for all users through the buttons provided. If an administrator selects any option for all users, a message will appear, cautioning that this selection will affect all users and requesting confirmation to update the information. After confirmation, a restart is required to see the changes reflected in the platform.
 
 ![](images/image1.png)
+
+## Panel Section Configuration
+
+On this page, you can customize the layout of various panels in the user interface: the section panel and the open items panel. 
+
+For the section panel, you can set its position and format, either at the top or left, with or without text. 
+
+As for the open items panel, you can choose where it appears: at the top, bottom, right, or left.
+
+![](images/image9.png)
 
 ----------------------------------------------------------------------
 # Disclaimer:
