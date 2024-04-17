@@ -7,6 +7,7 @@ Three languages are supported - English, Spanish and Russian.
 
 *   Color Schemes: Choose from a predefined list of color schemes to align the interface with specific workflows or visual preferences.
 *   Form Scales: Opt between two distinct form scales—Compact Mode and Full Scale Mode—for an optimized user experience that best fits your device and task at hand.
+*   Panels Configuration: Choose the location and settings for the "Section" and "Open items" panels.
 
 ## Accessing the Configuration Window
 
